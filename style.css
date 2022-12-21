@@ -20,13 +20,17 @@ html,body {
     position: relative;
 }
 
-#navbar ul li a {
+#navbar a {
     color: #333;
     text-decoration: none;
 }
 
 /* Hide nested ul by default */
 #navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
     display: none;
 }
 
@@ -36,15 +40,15 @@ html,body {
     color: #fff;
 }
 
-#navbar ul li:hover a {
+#navbar ul li ul li {
+    width: 200px;
+}
+
+#navbar li:hover > a {
     color: #fff;
 }
 
 /* Nested dropdown show */
 #navbar ul li:hover ul {
     display: block
-    position absolute;
-    left: 0;
-    width: 200px;
-    margin-top: 1rem;
 }
